@@ -7,9 +7,9 @@ import 'package:health_bloom/BottomTabScreens/Home/home.dart';
 import 'package:health_bloom/SettingsPackages/profile.dart';
 import 'package:health_bloom/covidresources/home.dart';
 import 'package:health_bloom/covidresources/liveIndiaCovidCases.dart';
+import 'package:health_bloom/onboarding/main.dart';
 import 'package:health_bloom/screens/authentication_service.dart';
 import 'package:health_bloom/screens/resetpassword.dart';
-import 'package:health_bloom/splashscreen/secondsplash.dart';
 import 'package:health_bloom/trackers/HeartRate/bpm.dart';
 import 'package:health_bloom/trackers/Step/step_tracker.dart';
 import 'package:health_bloom/trackers/Water/navigator.dart';
@@ -19,13 +19,11 @@ import 'package:health_bloom/userscreens/prescriptions.dart';
 import 'package:health_bloom/userscreens/signout.dart';
 import 'package:health_bloom/userscreens/sucessfull.dart';
 import 'package:lottie/lottie.dart';
-import 'package:health_bloom/BottomTabScreens/Trackers/home.dart';
 import 'package:health_bloom/screens/login.dart';
 import 'package:health_bloom/screens/signup.dart';
 import 'package:health_bloom/userscreens/home.dart';
 import 'package:health_bloom/userscreens/bmi.dart';
 import 'package:health_bloom/userscreens/exercises.dart';
-import 'package:health_bloom/splashscreen/firstsplash.dart';
 import 'package:health_bloom/userscreens/settings/body.dart';
 import 'package:health_bloom/userscreens/discover.dart';
 import 'package:health_bloom/covidresources/covidfacts.dart';
@@ -39,6 +37,8 @@ import 'package:health_bloom/userscreens/joggingtimer.dart';
 
 import 'SettingsPackages/feedback.dart';
 import 'SettingsPackages/help.dart';
+
+import 'package:health_bloom/sidedrawer/main.dart';
 
  Future <void> main() async{
    WidgetsFlutterBinding.ensureInitialized();
@@ -81,9 +81,9 @@ class MyHomePage extends StatelessWidget {
     final firebaseUser = context.watch<User>();
 
     if (firebaseUser != null){
-      return Nav();
+      return HomeScreenWithDrawer();
     }
-      return Splash1();
+      return OnBoardingMain();
     }
  }
 

@@ -11,7 +11,6 @@ class _IndiaState extends State<India> {
 
   final String url = "https://api.rootnet.in/covid19-in/stats/latest";
   Future <List>  datas;
-
   Future <List>  getData() async {
     var response = await Dio().get(url);
     return response.data['data']['regional'];

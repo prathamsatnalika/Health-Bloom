@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_bloom/BottomTabScreens/Home/home.dart';
 import 'package:health_bloom/userscreens/settings/body.dart';
-import 'package:health_bloom/BottomTabScreens/Trackers/home.dart';
 
 class Nav extends StatefulWidget {
   @override
@@ -12,7 +11,6 @@ class _NavState extends State<Nav> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
     Home(),
-    TrackerScreenHome(),
     MainSettings()
   ];
 
